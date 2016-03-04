@@ -1,0 +1,22 @@
+body{
+    background-color: #2efaff;
+}
+
+
+.teamMain{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto 50%;
+
+}
+
+.teamMain div{
+    text-align: center;
+}
+
+@media screen and (max-width: 580px) {
+    .teamMain {
+        background-color: lightgreen;
+    }
+}
