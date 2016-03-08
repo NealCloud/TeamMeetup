@@ -3,21 +3,21 @@
         <h1>Account Page</h1>
     </div>
     <div>
-        <h2>Welcome {{user.name}}</h2>
+        <h2>Welcome {{team.user.name}}</h2>
     </div>
     <div>
-        <button ng-click="calendar()">Calendar</button>
+        <a href="#calendar">Calendar</a>
     </div>
     <div>
-        <button ng-click="createEvent()">Create Event</button>
+        <a href="#createevent">Create Event</a>
     </div>
     <div>
-        <button ng-click="createTeam()">Create Team</button>
+        <a href="#createteam">Create Team</a>
     </div>
     <div>
-        <button ng-click="teamView()">{{user.name}}'s Teams</button>
+        <a href="#teams">{{user.name}}'s Teams</a>
     </div>
     <div>
-        <button ng-click="logOut()">Log Out</button>
+        <a href="#logout">LogOut</a>
     </div>
 </div>

@@ -5,18 +5,19 @@
     <div>
         <h2 ng-bind="title"></h2>
     </div>
-   <div>
-       <button ng-click="login()">Login</button>
-   </div>
+
     <div>
         <input type="text" required>
-
     </div>
     <div>
         <input type="text" required>
     </div>
-
     <div>
-        <button ng-click="signUp()">Sign Up</button>
+        <button><a ng-click="team.loginAccount()" href="#account">Login</a></button>
+    </div>
+
+    <p>Don't have an account?</p>
+    <div>
+        <button ng-click="team.signUp()">Sign Up</button>
     </div>
 </div>
