@@ -27,7 +27,9 @@
             this.user = null;
             this.loginAccount = function(){
                 this.user = users[0];
-            }
+            };
+
+
 
 
         })

@@ -7,6 +7,4 @@
         .controller('extraStuff', function () {
             this.tCtrl = "hey this extra!";
         })
-
-
 }());
