@@ -10,14 +10,14 @@
         <input type="text" required>
     </div>
     <div>
-        <input type="text" required>
+        <input type="text" ng-model="es.yo" required>
     </div>
     <div>
         <button><a ng-click="team.loginAccount()" href="#account">Login</a></button>
     </div>
-
+    {{es.tCtrl}}
     <p>Don't have an account?</p>
     <div>
-        <button ng-click="team.signUp()">Sign Up</button>
+        <button ng-click="es.addData(es.yo)">Sign Up</button>
     </div>
 </div>

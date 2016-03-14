@@ -4,15 +4,16 @@
 (function(){
     angular.module("teampUp")
 
-        .factory('extraStuff', function () {
-            this.Teams = "hey this extra!";
+        .factory('teamFactory', function (){
+            var team = {};
+            team.test = "test success";
+            team.firebaseRef = new Firebase("https://popping-heat-5383.firebaseio.com/teams");
 
-            this.firebaseRef = new Firebase("https://popping-heat-5383.firebaseio.com/");
-
-            this.addTeam = function(teamName){
-                firebaseRef.push({
+            team.addTeam = function(teamName){
+                this.firebaseRef.push({
                     name: teamName
                 });
             };
+            return team;
         })
 })();

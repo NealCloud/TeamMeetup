@@ -3,35 +3,18 @@
  */
 (function() {
     angular.module("teampUp")
-        .config(function($routeProvider){
-            $routeProvider
-                .when('/splash', {
-                    templateUrl: 'splash.html'
-                })
-                .when('/login', {
-                    templateUrl: 'login.html'
-                })
-                .when('/account', {
-                    templateUrl: 'account.html'
-                })
-                .when('/teams', {
-                    templateUrl: 'teams.html',
-                    controller: 'extraStuff',
-                    controllerAs: 'tc'
-                })
-                .otherwise({
-                    redirectTo: '/splash'
-                })
-        })
         .controller('teamController', function () {
             this.user = null;
             this.loginAccount = function(){
                 this.user = users[0];
             };
-
-
-
-
+        })
+        .controller('extraStuff', function (teamFactory) {
+            this.tCtrl = teamFactory.test;
+            this.addData = function(data){
+                console.log(data);
+                teamFactory.addTeam(data);
+            }
         })
         .directive('teamsPage', function(){
             return{
@@ -49,7 +32,8 @@
             password: "peconpie23",
             public: true,
             premium: false,
-            teams: [{
+            teams: [
+                {
                 creator: 2135,
                 name: "Malicious Ardvarks",
                 teamId: 2309,
@@ -61,30 +45,30 @@
                 players: true,
                 events: [{}]
             },
-                {
-                    creator: 2135,
-                    name: "Frothing Artichokes",
-                    teamId: 2309,
-                    leaders: [3245, 23523],
-                    teamspots: 4,
-                    standby: 2,
-                    public: true,
-                    premium: false,
-                    players: true,
-                    events: [{}]
-                },
-                {
-                    creator: 2135,
-                    name: "Tuna Salads",
-                    teamId: 2309,
-                    leaders: [3245, 23523],
-                    teamspots: 4,
-                    standby: 2,
-                    public: true,
-                    premium: false,
-                    players: true,
-                    events: [{}]
-                }
+            {
+                creator: 2135,
+                name: "Frothing Artichokes",
+                teamId: 2309,
+                leaders: [3245, 23523],
+                teamspots: 4,
+                standby: 2,
+                public: true,
+                premium: false,
+                players: true,
+                events: [{}]
+            },
+            {
+                creator: 2135,
+                name: "Tuna Salads",
+                teamId: 2309,
+                leaders: [3245, 23523],
+                teamspots: 4,
+                standby: 2,
+                public: true,
+                premium: false,
+                players: true,
+                events: [{}]
+            }
             ]
         }
     ];
