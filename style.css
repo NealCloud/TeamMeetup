@@ -1,22 +1,101 @@
-body{
+body {
     background-color: #2efaff;
+    font-family: 'Ubuntu', Arial, sans-serif;
+    box-sizing: border-box;
 }
-
-
 .teamMain{
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    margin: auto 50%;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.sideContent{
+    width: 20%;
+    height: 99vh;
+}
+.mainContent{
+    position: relative;
+    width: 45%;
+    height: 99vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
 
 }
 
-.teamMain div{
+.splashTitle{
+    text-align: center;
+    font-size: 50px;
+}
+
+.splashLink{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.splashLink a{
+    text-decoration: none;
+    background-color: #f1841e;
+    font-size: 45px;
+    color: #FFFFFF;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.splashLink span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.splashLink span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.splashLink:hover span {
+    padding-right: 25px;
+}
+
+.splashLink:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.sideContent img{
+    width: 100%;
+    height: 100%;
+}
+
+.footerMain{
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
     text-align: center;
 }
 
-@media screen and (max-width: 580px) {
-    .teamMain {
+@media screen and (max-width: 640px) {
+    body {
         background-color: lightgreen;
+    }
+    .mainContent{
+        width: 100%;
+    }
+    .sideContent{
+        display: none;
+    }
+    .splashLink a{
+        font-size: 30px;
+    }
+    .splashTitle{
+        font-size: 30px;
     }
 }

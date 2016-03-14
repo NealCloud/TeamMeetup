@@ -1,23 +1,51 @@
-<div class="teamMain">
-    <div>
-        <h1>Welcome to Teamup</h1>
-    </div>
-    <div>
-        <h2 ng-bind="title"></h2>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="teamMain">
+        <aside class="sideContent">
+            <img src="http://placehold.it/250x1000">
+        </aside>
+        <section class="mainContent">
+            <div>
+                <h1>Sign In</h1>
+            </div>
 
-    <div>
-        <input type="text" required>
+            <form action="">
+                <div>
+                     User Name:<br>
+                    <input type="text" required>
+                </div>
+                <div>
+                    Password:<br>
+                    <input type="password" required>
+                </div>
+                <br>
+            </form>
+
+            <div class="splashLink">
+               <a href="account.html"><span>Login</span></a>
+            </div>
+
+            <p>Don't have an account?</p>
+
+            <div class="splashLink">
+                <a href=""><span>Sign Up</span></a>
+            </div>
+
+            <footer class="footerMain">
+                Footer stuff
+            </footer>
+        </section>
+
+        <aside class="sideContent">
+            <img src="http://placehold.it/250x1000">
+        </aside>
     </div>
-    <div>
-        <input type="text" ng-model="es.yo" required>
-    </div>
-    <div>
-        <button><a ng-click="team.loginAccount()" href="#account">Login</a></button>
-    </div>
-    {{es.tCtrl}}
-    <p>Don't have an account?</p>
-    <div>
-        <button ng-click="es.addData(es.yo)">Sign Up</button>
-    </div>
-</div>
+</body>
+</html>
